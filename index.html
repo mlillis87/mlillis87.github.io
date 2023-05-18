@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Keyboard</title>
+    <style>
+        @font-face {
+            font-family: 'Jkaro';
+            src: url('fonts/Jkaro-Regular.ttf') format('truetype'); /* Replace with the path to your font file */
+            /* Add additional font formats (e.g., woff, woff2) if available */
+        }
+        
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 10px;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        .key {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Jkaro', sans-serif; /* Use the font family name defined in @font-face */
+            font-size: 1.2rem;
+            height: 40px;
+        }
+        #output {
+            width: 400px;
+            height: 100px;
+            font-size: 1.2rem;
+            font-family: 'Jkaro', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="keyboard">
+        <div class="key" onclick="addCharacter('A')">A</div>
+        <div class="key" onclick="addCharacter('B')">B</div>
+        <div class="key" onclick="addCharacter('C')">C</div>
+        <div class="key" onclick="addCharacter('D')">D</div>
+        <div class="key" onclick="addCharacter('E')">E</div>
+        <div class="key" onclick="addCharacter('F')">F</div>
+        <div class="key" onclick="addCharacter('G')">G</div>
+        <div class="key" onclick="addCharacter('H')">H</div>
+        <div class="key" onclick="addCharacter('I')">I</div>
+        <div class="key" onclick="addCharacter('J')">J</div>
+        <div class="key" onclick="addCharacter('K')">K</div>
+        <div class="key" onclick="addCharacter('L')">L</div>
+        <div class="key" onclick="addCharacter('M')">M</div>
+        <div class="key" onclick="addCharacter('N')">N</div>
+        <div class="key" onclick="addCharacter('O')">O</div>
+        <div class="key" onclick="addCharacter('P')">P</div>
+        <div class="key" onclick="addCharacter('Q')">Q</div>
+        <div class="key" onclick="addCharacter('R')">R</div>
+        <div class="key" onclick="addCharacter('S')">S</div>
+        <div class="key" onclick="addCharacter('T')">T</div>
+        <div class="key" onclick="addCharacter('U')">U</div>
+        <div class="key" onclick="addCharacter('V')">V</div>
+        <div class="key" onclick="addCharacter('W')">W</div>
+        <div class="key" onclick="addCharacter('X')">X</div>
+        <div class="key" onclick="addCharacter('Y')">Y</div>
+        <div class="key" onclick="addCharacter('Z')">Z</div>
+        <div class="key" onclick="addCharacter('0')">0</div>
+        <div class="key" onclick="addCharacter('1')">1</div>
+        <div class="key" onclick="addCharacter('2')">2</div>
+        <div class="key" onclick="addCharacter('3')">3</div>
+        <div class="key" onclick="addCharacter('4')">4</div>
+        <div class="key" onclick="addCharacter('5')">5</div>
+        <div class="key" onclick="addCharacter('6')">6</div>
+        <div class="key" onclick="addCharacter('7')">7</div>
+        <div class="key" onclick="addCharacter('8')">8</div>
+        <div class="key" onclick="addCharacter('9')">9</div>
+        <div class="key" onclick="addCharacter('!')">!</div>
+        <div class="key" onclick="addCharacter('@')">@</div>
+        <div class="key" onclick="addCharacter('#')">#</div>
+        <div class="key" onclick="addCharacter('$')">$</div>
+        <div class="key" onclick="addCharacter('%')">%</div>
+        <div class="key" onclick="addCharacter('^')">^</div>
+        <div class="key" onclick="addCharacter('&')">&</div>
+        <div class="key" onclick="addCharacter('*')">*</div>
+        <div class="key" onclick="addCharacter('(')">(</div>
+        <div class="key" onclick="addCharacter(')')">)</div>
+        <!-- Add more keys as needed -->
+    </div>
+    <textarea id="output"></textarea>
+
+    <script>
+        function addCharacter(character) {
+            var output = document.getElementById("output");
+            output.value += character;
+        }
+    </script>
+</body>
+</html>
